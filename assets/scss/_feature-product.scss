@@ -1,0 +1,46 @@
+
+.section-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 60px;
+    h2 {
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 1.2;
+        color: $primary-color;
+    }
+    img {
+        position: absolute;
+        top: 100%;
+    }
+}
+@media screen and (max-width: 991px) {
+    .section-title {
+        margin-bottom: 50px;
+        h2 {
+            font-size: 44px;
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .section-title {
+        margin-bottom: 40px;
+        h2 {
+            font-size: 38px;
+        }
+    }
+}
+@media screen and (max-width: 575px) {
+    .section-title {
+        h2 {
+            font-size: 32px;
+        }
+        img {
+            width: 200px;
+        }
+    }
+}
+
+// Featured Product Area Style Start here ============================

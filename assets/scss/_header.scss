@@ -160,6 +160,7 @@
     text-align: center;
     gap: 32px;
     overflow-y: hidden;
+    z-index: 999;
 
 
     // transform: translateY(100px);
@@ -181,20 +182,24 @@
             &.mobile-menu {
                 transform: translateY(0px);
                 transition-duration: .4s;
+                transition: all .3s ease-in-out;
             }
         }
         .mobile-menu-contact {
             transform: translateY(0px);
             transition-duration: .6s;
+            transition: all .3s ease-in-out;
         }
         .mobile-menu-footer {
             .gmail {
                 transform: translateY(0px);
                 transition-duration: .8s;
+                transition: all .3s ease-in-out;
             }
             ul {
                 transform: translateY(0px);
                 transition-duration: 1s;
+                transition: all .3s ease-in-out;
             }
         }
     }
@@ -231,6 +236,7 @@
     padding: 0;
     display: flex;
     align-items: center;
+    z-index: 999999;
     justify-content: center;
     svg {
         transition: all .3s ease-in-out;
@@ -378,6 +384,11 @@
     }
     .mobile-menu-wrapper {
         display: flex; 
+    }
+    body {
+        &.menu-body {
+            overflow: hidden;
+        }
     }
     
 }
