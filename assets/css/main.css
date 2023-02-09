@@ -505,15 +505,15 @@ label {
   padding: 32px 16px 25px;
   text-align: center;
   gap: 32px;
-  overflow-y: hidden;
   z-index: 999;
   opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease-in-out;
+  z-index: -2;
 }
 .mobile-menu-wrapper.menu-active {
+  transition: all 0.3s ease-in-out;
   transform: translateY(0px);
   opacity: 1;
+  z-index: 999;
   visibility: visible;
 }
 .mobile-menu-wrapper.menu-active .mobile-menu-top a {
@@ -535,11 +535,6 @@ label {
   transition-duration: 0.8s;
   transition: all 0.3s ease-in-out;
 }
-.mobile-menu-wrapper.menu-active .mobile-menu-footer ul {
-  transform: translateY(0px);
-  transition-duration: 1s;
-  transition: all 0.3s ease-in-out;
-}
 .mobile-menu-wrapper .mobile-menu-top a {
   transform: translateY(50px);
   display: block;
@@ -548,10 +543,6 @@ label {
   transform: translateY(50px);
 }
 .mobile-menu-wrapper .mobile-menu-contact {
-  transform: translateY(50px);
-}
-.mobile-menu-wrapper .mobile-menu-footer ul,
-.mobile-menu-wrapper .mobile-menu-footer .gmail {
   transform: translateY(50px);
 }
 
@@ -1506,6 +1497,7 @@ label {
   align-items: center;
   justify-content: space-between;
   gap: 20px;
+  visibility: visible;
 }
 .footer-wrapper .gmail {
   display: flex;
@@ -1547,6 +1539,67 @@ label {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+}
+.bg-guyabano {
+  background-color: #F8F8F8;
+}
+
+.playground-banner-wrapper {
+  max-width: 613px;
+  visibility: visible;
+}
+.playground-banner-wrapper p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  text-align: center;
+  color: #000000;
+  opacity: 0.8;
+  margin-top: 32px;
+}
+.playground-banner-wrapper ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  gap: 17px;
+  margin-top: 40px;
+}
+.playground-banner-wrapper ul li a {
+  display: block;
+}
+.playground-banner-wrapper ul li a svg g {
+  transition: all 0.3s ease-in-out;
+}
+.playground-banner-wrapper ul li a:hover {
+  transform: scale(1.1);
+}
+.playground-banner-wrapper ul li a:hover svg g {
+  opacity: 1;
+}
+
+.playground-area {
+  padding: 100px 0px;
+}
+
+@media screen and (max-width: 991px) {
+  .playground-area {
+    padding: 80px 0px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .playground-banner-wrapper p {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  .playground-banner-wrapper ul {
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .playground-area {
+    padding: 60px 0px;
   }
 }
 

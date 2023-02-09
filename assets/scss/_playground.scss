@@ -1,0 +1,68 @@
+
+.bg-guyabano {
+    background-color: #F8F8F8;
+}
+
+.playground-banner-wrapper {
+    max-width: 613px;
+    visibility: visible ;
+    p {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 140%;
+        text-align: center;
+        color: #000000;
+        opacity: 0.8;
+        margin-top: 32px;
+    }
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        list-style: none;
+        gap: 17px;
+        margin-top: 40px;
+        li {
+            a {
+                display: block;
+                svg {
+                    g {
+                        transition: all .3s ease-in-out;
+                    }
+                }
+                &:hover {
+                    transform: scale(1.1);
+                    svg {
+                        g {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.playground-area {
+    padding: 100px 0px;
+}
+@media screen and (max-width: 991px) {
+    .playground-area {
+        padding: 80px 0px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .playground-banner-wrapper {
+        p {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        ul {
+            margin-top: 20px;
+        }
+    }
+}
+@media screen and (max-width: 575px) {
+    .playground-area {
+        padding: 60px 0px;
+    }
+}
