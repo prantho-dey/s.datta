@@ -6,8 +6,13 @@
 	$('.hamburger').on('click', function(){
 		$('.mobile-menu-wrapper').addClass('menu-active');
 		$('body').addClass('menu-body');
+
 	})
 	$('.mobile-menu-close').on('click', function(){
+		$('.mobile-menu-wrapper').removeClass('menu-active');
+		$('body').removeClass('menu-body');
+	})
+	$('.mobile-menu ul li').on('click', function(){
 		$('.mobile-menu-wrapper').removeClass('menu-active');
 		$('body').removeClass('menu-body');
 	})

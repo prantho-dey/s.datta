@@ -15,8 +15,18 @@
     img {
         position: absolute;
         top: 100%;
+        animation: line_drow 3s linear infinite alternate-reverse;
     }
 }
+@keyframes line_drow {
+    to {
+        clip-path: polygon(0 0, 0% 0, 0% 100%, 0 100%);
+    }
+    from {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+
 @media screen and (max-width: 991px) {
     .section-title {
         margin-bottom: 50px;
@@ -131,10 +141,11 @@
         justify-content: center;
         svg {
             transition: all .3s ease-in-out;
+            transform: rotate(0deg);
         }
         &:hover {
             svg {
-                transform: scale(1.05);
+                transform: rotate(45deg);
             }
         }
     }

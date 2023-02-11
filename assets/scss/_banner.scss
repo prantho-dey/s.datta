@@ -48,6 +48,7 @@
             position: absolute;
             right: 10%;
             top: 45%;
+            animation: line_drow 3s linear infinite alternate-reverse;
         }
     }
 }
@@ -109,7 +110,7 @@
 }
 .banner-about-experence {
     .counter-wrap {
-        margin-bottom: 95px;
+        margin-bottom: 80px;
         &:last-child {
             margin-bottom: 0;
         }

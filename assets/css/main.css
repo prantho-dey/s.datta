@@ -506,6 +506,7 @@ label {
   text-align: center;
   gap: 32px;
   z-index: 999;
+  overflow-y: auto;
   opacity: 0;
   z-index: -2;
 }
@@ -763,6 +764,7 @@ label {
   position: absolute;
   right: 10%;
   top: 45%;
+  animation: line_drow 3s linear infinite alternate-reverse;
 }
 
 @keyframes wave-animation {
@@ -837,7 +839,7 @@ label {
 }
 
 .banner-about-experence .counter-wrap {
-  margin-bottom: 95px;
+  margin-bottom: 80px;
 }
 .banner-about-experence .counter-wrap:last-child {
   margin-bottom: 0;
@@ -1048,8 +1050,17 @@ label {
 .section-title img {
   position: absolute;
   top: 100%;
+  animation: line_drow 3s linear infinite alternate-reverse;
 }
 
+@keyframes line_drow {
+  to {
+    clip-path: polygon(0 0, 0% 0, 0% 100%, 0 100%);
+  }
+  from {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
 @media screen and (max-width: 991px) {
   .section-title {
     margin-bottom: 50px;
@@ -1155,9 +1166,10 @@ label {
 }
 .feature-pdct-content > a svg {
   transition: all 0.3s ease-in-out;
+  transform: rotate(0deg);
 }
 .feature-pdct-content > a:hover svg {
-  transform: scale(1.05);
+  transform: rotate(45deg);
 }
 
 .feature-button {
@@ -1245,6 +1257,12 @@ label {
   gap: 24px;
 }
 
+.signle-part-exprience:hover h6 {
+  opacity: 1;
+}
+.signle-part-exprience:hover h6 a {
+  background-size: 100% 1.5px;
+}
 .signle-part-exprience h4 {
   font-weight: 600;
   font-size: 24px;
@@ -1258,6 +1276,15 @@ label {
   color: #000000;
   opacity: 0.8;
   margin-top: 7px;
+}
+.signle-part-exprience h6 a {
+  transition: all 0.4s ease-in-out;
+  background-image: linear-gradient(#000000, #000000);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 0% 1.5px;
+  text-decoration: none;
+  display: inline-block;
 }
 .signle-part-exprience p {
   font-weight: 400;
@@ -1287,6 +1314,9 @@ label {
   .exprience-inner-wrap {
     gap: 40px;
     width: 100%;
+  }
+  .exprience-inner-wrap:nth-child(2) {
+    order: unset;
   }
 
   .signle-part-exprience {
@@ -1465,6 +1495,15 @@ label {
   line-height: 1.3;
   text-align: center;
   color: #000000;
+}
+.contact-wrapper h2 span {
+  -webkit-animation-name: phonebibrate;
+  animation-name: phonebibrate;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -webkit-transform-origin: 50% 100%;
+  display: inline-block;
 }
 .contact-wrapper p {
   max-width: 640px;
