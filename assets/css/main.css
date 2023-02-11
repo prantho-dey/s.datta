@@ -1276,6 +1276,9 @@ label {
   color: #000000;
   opacity: 0.8;
   margin-top: 7px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 .signle-part-exprience h6 a {
   transition: all 0.4s ease-in-out;
