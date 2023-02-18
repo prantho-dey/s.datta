@@ -1006,6 +1006,9 @@ label {
     gap: 40px;
     flex-wrap: wrap;
   }
+  .partner-wrapper img {
+    width: 150px;
+  }
 }
 @media screen and (max-width: 991px) {
   .partner-area {

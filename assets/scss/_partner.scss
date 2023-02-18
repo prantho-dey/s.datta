@@ -26,6 +26,9 @@
     .partner-wrapper {
         gap: 40px;
         flex-wrap: wrap;
+        img {
+            width: 150px;
+        }
     }
 }
 @media screen and (max-width: 991px) {
