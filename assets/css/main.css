@@ -1326,6 +1326,9 @@ label {
     text-align: center;
     width: 100%;
   }
+  .signle-part-exprience h6 {
+    justify-content: center;
+  }
 }
 .testimonial-area {
   background: #F8F8F8;
@@ -1543,7 +1546,7 @@ label {
   }
 }
 .footer-wrapper {
-  padding: 12px 0px;
+  padding: 15px 0px;
   border-top: 1px solid #EEEEEE;
   display: flex;
   align-items: center;
